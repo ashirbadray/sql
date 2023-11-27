@@ -86,7 +86,7 @@ CREATE TABLE sale (
     FOREIGN KEY (EmployeeID) REFERENCES employee(EmployeeID)
 );
 
-Difference Between INT and TINYINT ?
+<b>>Difference Between INT and TINYINT ?</b
 In MySQL, both INT and TINYINT are numeric data types used to store integer values, but they differ in terms of their storage size and the range of values they can represent.
 
 1. INT (Integer):
