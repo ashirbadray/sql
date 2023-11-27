@@ -125,8 +125,9 @@ CHAR: It always occupies the specified length, even if the actual data is shorte
 VARCHAR: It only uses the storage space required for the actual data plus one or two bytes for the length of the data. For example, 
 if you store "hello" in a VARCHAR(10), it will use 6 bytes (5 for the characters, and 1 for the length).
 Performance:
-CHAR: Can be more efficient for fixed-length data, especially when the length is consistent, as it avoids the need to store and manage variable-length information.
-VARCHAR: More storage-efficient for variable-length data and can save space, especially when dealing with a large amount of data with varying lengths.
+CHAR: Can be more efficient for fixed-length data, especially when the length is consistent, as it avoids the need to store and manage
+variable-length information.VARCHAR: More storage-efficient for variable-length data and can save space, especially when dealing with a large amount 
+of data with varying lengths.
 Trailing Spaces:
 CHAR: Pads with spaces to the specified length, which means trailing spaces are always present.
 VARCHAR: Does not pad with spaces, and trailing spaces are not stored
