@@ -87,7 +87,8 @@ CREATE TABLE sale (
 );
 
 Difference Between INT and TINYINT ?
-In MySQL, both INT and TINYINT are numeric data types used to store integer values, but they differ in terms of their storage size and the range of values they can represent.
+In MySQL, both INT and TINYINT are numeric data types used to store integer values, but they differ in terms of their storage size and 
+the range of values they can represent.
 
 1. INT (Integer):
 
@@ -99,29 +100,37 @@ INT is a standard-size integer that provides a large range of values. It's suita
 
 Storage Size: 1 byte
 Range: -128 to 127 (signed) or 0 to 255 (unsigned)
-TINYINT is a smaller integer type that occupies less storage space. It's often used when storage efficiency is crucial, especially when the range of values is known to be small.
+TINYINT is a smaller integer type that occupies less storage space. It's often used when storage efficiency is crucial, especially when 
+the range of values is known to be small.
 
 
 Choosing Between INT and TINYINT:
-If your application requires a small range of values (e.g., representing binary flags, status codes), and storage efficiency is a concern, you might choose TINYINT.
-For general-purpose integer storage where a larger range of values is needed, you might choose INT.Keep in mind that using a smaller data type like TINYINT can save storage space, but it might have a negligible impact on performance. The choice depends on the specific needs and constraints of your application.
+If your application requires a small range of values (e.g., representing binary flags, status codes), and storage efficiency is a concern, 
+you might choose TINYINT.For general-purpose integer storage where a larger range of values is needed, you might choose INT.Keep in mind that 
+using a smaller data type like TINYINT can save storage space, but it might have a negligible impact on performance. The choice depends on the 
+specific needs and constraints of your application.
 Note:
-Both INT and TINYINT can be used with or without the UNSIGNED attribute, which determines whether negative values are allowed.If you're dealing with very large values, you might consider larger integer types like BIGINT.
+Both INT and TINYINT can be used with or without the UNSIGNED attribute, which determines whether negative values are allowed.If you're dealing with
+very large values, you might consider larger integer types like BIGINT.
 
 what is differnce between char and varchar
 In SQL, both CHAR and VARCHAR are used to store character string data, but they have some key differences:
 Fixed vs. Variable Length:
-CHAR: Fixed-length character data type. It always reserves a fixed amount of storage space for the data, padding with spaces if the actual data is shorter than the specified length.
-VARCHAR: Variable-length character data type. It only stores the actual characters entered and doesn't pad with spaces. It's more storage-efficient for variable-length data.
+CHAR: Fixed-length character data type. It always reserves a fixed amount of storage space for the data, padding with spaces 
+if the actual data is shorter than the specified length.
+VARCHAR: Variable-length character data type. It only stores the actual characters entered and doesn't pad with spaces. It's more storage-efficient 
+for variable-length data.
 Storage Size:
 CHAR: It always occupies the specified length, even if the actual data is shorter. For example, CHAR(10) will always use 10 bytes of storage.
-VARCHAR: It only uses the storage space required for the actual data plus one or two bytes for the length of the data. For example, if you store "hello" in a VARCHAR(10), it will use 6 bytes (5 for the characters, and 1 for the length).
+VARCHAR: It only uses the storage space required for the actual data plus one or two bytes for the length of the data. For example, 
+if you store "hello" in a VARCHAR(10), it will use 6 bytes (5 for the characters, and 1 for the length).
 Performance:
 CHAR: Can be more efficient for fixed-length data, especially when the length is consistent, as it avoids the need to store and manage variable-length information.
 VARCHAR: More storage-efficient for variable-length data and can save space, especially when dealing with a large amount of data with varying lengths.
 Trailing Spaces:
 CHAR: Pads with spaces to the specified length, which means trailing spaces are always present.
 VARCHAR: Does not pad with spaces, and trailing spaces are not stored
-In general, use CHAR when the length of the data is fixed, and use VARCHAR when the length is variable. The choice between them depends on your specific data requirements and the trade-offs between storage space and performance.
+In general, use CHAR when the length of the data is fixed, and use VARCHAR when the length is variable. 
+The choice between them depends on your specific data requirements and the trade-offs between storage space and performance.
 
 
